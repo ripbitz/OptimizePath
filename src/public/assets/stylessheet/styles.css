@@ -1,0 +1,37 @@
+/* Fonts */
+@import url(../fonts/fonts.css);
+
+body{
+    background-color: #191919;
+    margin: 0px;
+    overflow: hidden;
+
+}
+
+#titleContainer{
+    padding: 0 70px 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#title{
+    font-family: Sarabun-BoldItalic;
+    font-size: 40px;
+    color: #f5f2d0;
+}
+
+#gameBoardContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#gameBoard{
+    width: 80%;
+    height: 600px;
+    background-color: #262626;
+    border: 1px #f5f2d0 solid;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+}
