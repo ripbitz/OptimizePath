@@ -21,14 +21,14 @@ body{
     color: #f5f2d0;
 }
 
-#gameBoardContainer{
+#content{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 #gameBoard{
-    width: 80%;
+    width: 800px;
     height: 600px;
     background-color: #262626;
     border: 1px #f5f2d0 solid;
