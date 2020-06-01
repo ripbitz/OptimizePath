@@ -2,36 +2,99 @@
 @import url(../fonts/fonts.css);
 
 body{
-    background-color: #191919;
-    margin: 0px;
-    overflow: hidden;
-
+  background-color: #191919;
+  margin: 0px;
+  overflow: hidden;
 }
 
 #titleContainer{
-    padding: 0 70px 0 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  padding: 0 70px 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #title{
-    font-family: Sarabun-BoldItalic;
-    font-size: 40px;
-    color: #f5f2d0;
+  font-family: Sarabun-BoldItalic;
+  font-size: 40px;
+  color: #FFF;
 }
 
 #content{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 #gameBoard{
-    width: 800px;
-    height: 600px;
-    background-color: #262626;
-    border: 1px #f5f2d0 solid;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  width: 750px;
+  height: 500px;
+  background-color: #262626;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+}
+
+#leftContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#buttonContainer{
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#runButton{
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px #a2e665 solid;
+  border-radius: 5px;
+  color: #a2e665;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  outline: none;
+}
+
+#runButton:hover{
+  background-color: #a2e665;
+  color: #FFF;
+}
+
+#editButton{
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px #00688B solid;
+  border-radius: 5px;
+  color: #00688B;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  outline: none;
+}
+
+#editButton:hover{
+  background-color: #00688B;
+  color: #FFF;
+}
+
+#controlPanel{
+  width: 300px;
+  height: 300px;
+  background-color: #FFF;
+  border: 1px #262626 solid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+}
+
+.controlButton{
+  width: 30px;
+  height: 30px;
+  border: 1px #262626 solid;
+  font-size: 10px;
+  outline: none;
+}
+
+.controlButton:hover{
+  background-color: #262626;
+  color: #FFF;
 }
