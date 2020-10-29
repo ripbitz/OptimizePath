@@ -2,6 +2,7 @@
 import { game } from './game.js'
 import { coordinate } from './components.js';
 import { helpers } from './helpers.js'; 
+import { mechanics } from './mechanics.js';
 
 export const create = {
 	// Create the game matrix
@@ -16,6 +17,16 @@ export const create = {
 		return m;
 	},
 
+	// Create a map coordinate
+	mapCoordinate: (context, positionX, positionY, color) => {
+		context.beginPath();
+		context.beginPath();
+		context.arc(positionX, positionY, 16, 0, Math.PI * 2);
+		context.fillStyle = color;
+		context.fill();
+		context.closePath();
+	},
+
 	// Create the game map
 	map: () => {
 		let map = create.matrix();
@@ -25,12 +36,9 @@ export const create = {
 			positionY += 200;
 			for(let j = 0; j < map[i].length; j++){
 				let c  = game.context;
-				c.beginPath();
-				game.context.arc(positionX, positionY, 16, 0, Math.PI * 2);
-				c.fillStyle = '#FFF';
-				c.fill();
-				c.closePath();
-				map[i][j] = new coordinate(positionX, positionY, 1);
+				const color = '#FFF';
+				create.mapCoordinate(c, positionX, positionY, color);
+				map[i][j] = new coordinate(positionX, positionY, 1, color);
 				positionX += 200;
 			}
 		}
@@ -38,7 +46,7 @@ export const create = {
 	},
 
 	// Create the game control panel
-	controlPanel: () => {
+	controlPanel: (map) => {
 		let buttons = create.matrix();
 		const controlPanel = document.getElementById('controlPanel');
 		let counter = 1;
@@ -47,7 +55,8 @@ export const create = {
 				const b = document.createElement('button');
 				b.className = 'controlButton';
 				b.setAttribute('id', counter.toString().concat('controlButton'));
-				b.textContent = j+1;
+				b.textContent = 'x';
+				mechanics.connectControlPanelToMap(b);
 				counter++;
 				controlPanel.appendChild(b);
 			}
